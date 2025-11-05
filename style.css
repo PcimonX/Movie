@@ -108,9 +108,24 @@ input {
 .modal img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* make the full image visible */
+  object-fit: contain;
   border-radius: 10px;
   display: block;
   margin: 0 auto;
-  max-height: 80vh; /* don’t go beyond screen height */
+  max-height: 80vh; /* fits inside screen height */
+}
+
+/* make modal scrollable if image too tall */
+.modal {
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* optional — for better desktop centering */
+@media (min-width: 768px) {
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
