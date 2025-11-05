@@ -104,3 +104,13 @@ input {
   font-size: 28px;
   cursor: pointer;
 }
+
+.modal img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* make the full image visible */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  max-height: 80vh; /* don’t go beyond screen height */
+}
